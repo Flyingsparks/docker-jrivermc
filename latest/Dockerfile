@@ -10,13 +10,13 @@ RUN apt-get update \
 
 # Add JRiver packages to apt-get
  && wget -q "http://dist.jriver.com/mediacenter@jriver.com.gpg.key" -O- | apt-key add - \
- && wget http://dist.jriver.com/latest/mediacenter/mediacenter22jessie.list -O \
-	/etc/apt/sources.list.d/mediacenter22.list \
+ && wget http://dist.jriver.com/latest/mediacenter/mediacenter23jessie.list -O \
+	/etc/apt/sources.list.d/mediacenter23.list \
 
 # Install JRiver and other required apps
  && apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
-	mediacenter22 \
+	mediacenter23 \
 	supervisor \
 	xserver-xorg-video-dummy \
 	x11vnc \
